@@ -9,7 +9,7 @@ type JobListProps = {
   visibleCount: number;
   onLoadMore: () => void;
   viewMode: "grid" | "list";
-  jobs?: any[]; 
+  jobs?: any[];
 };
 
 export const JobList = ({
@@ -17,7 +17,7 @@ export const JobList = ({
   visibleCount,
   onLoadMore,
   viewMode,
-  jobs = jobData, 
+  jobs = jobData,
 }: JobListProps) => {
   const filteredJobs = jobs.filter(
     (job) =>
@@ -37,8 +37,9 @@ export const JobList = ({
         }
       >
         {visibleJobs.map((job) => (
-          <JobCard key={job.id} job={job} />
+          <JobCard key={job.id} job={job} viewMode={viewMode} />
         ))}
+
       </div>
 
       {visibleCount < filteredJobs.length && (

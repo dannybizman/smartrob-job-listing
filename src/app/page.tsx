@@ -19,7 +19,7 @@ export default function Home() {
 
       <main className="min-h-screen w-full bg-white">
         <Banner />
-
+ 
         <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
           <div className="flex items-center justify-between mb-6">
             <h1 className="text-3xl font-bold text-black">Job Listings</h1>
